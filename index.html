@@ -42,7 +42,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/avatar02.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Liao Ruoheng</a></h1>
@@ -76,13 +76,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="weibo" target="_blank" href="https://weibo.com/u/1942119081" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liaohua/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="bilibili" target="_blank" href="https://space.bilibili.com/4463606" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
 			</div>
 		</nav>
@@ -100,7 +98,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/avatar02.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Liao Ruoheng</h1>
@@ -117,13 +115,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com/u/1942119081" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liaohua/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/4463606" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
 				</div>
 			</nav>
@@ -151,19 +147,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-arrow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-digitalsignature" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/17/arrow/">凯德弓夫</a>
+      <a class="article-title" href="/2018/03/17/digitalsignature/">转载：数字签名是什么？</a>
     </h1>
   
 
         
-        <a href="/2018/03/17/arrow/" class="archive-article-date">
+        <a href="/2018/03/17/digitalsignature/" class="archive-article-date">
   	<time datetime="2018-03-17T02:18:37.570Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
 </a>
         
@@ -171,7 +167,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="../../img/shejian.jpg" alt="cc"></p>
+        <p>今天，我读到一篇好文章。</p>
+<p>它用图片通俗易懂地解释了，”数字签名”（digital signature）和”数字证书”（digital certificate）到底是什么。</p>
+<p>我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。</p>
+<p>数字签名是什么？</p>
+<p>1.鲍勃有两把钥匙，一把是公钥，另一把是私钥。<br><img src="https://pic1.zhimg.com/80/v2-fcf8c3914faf7db0a03d1fbf53a07106_hd.jpg" alt="cc"><br>2.鲍勃把公钥送给他的朋友们—-帕蒂、道格、苏珊—-每人一把。<br><img src="https://pic3.zhimg.com/80/v2-5bf8a35cb52ad4b1df3f91773efeacd7_hd.jpg" alt="cc"><br>3.苏珊要给鲍勃写一封保密的信。她写完后用鲍勃的公钥加密，就可以达到保密的效果。<br><img src="https://pic2.zhimg.com/80/v2-e43476934d213b44ed0dc3104c6db3c0_hd.jpg" alt="cc"><br>4.鲍勃收信后，用私钥解密，就看到了信件内容。这里要强调的是，只要鲍勃的私钥不泄露，这封信就是安全的，即使落在别人手里，也无法解密。<br><img src="https://pic3.zhimg.com/80/v2-3684a51d6c43785789c36d1b55500fad_hd.jpg" alt="cc"><br>5.鲍勃给苏珊回信，决定采用”数字签名”。他写完后先用Hash函数，生成信件的摘要（digest）。<br><img src="https://pic3.zhimg.com/80/v2-fd53424150efdb7868fcb98278475238_hd.jpg" alt="cc"><br>6.然后，鲍勃使用私钥，对这个摘要加密，生成”数字签名”（signature）。<br><img src="https://pic4.zhimg.com/80/v2-1b9ac3b7ccf99dd97da6cf2a439fadf6_hd.jpg" alt="cc"><br>7.鲍勃将这个签名，附在信件下面，一起发给苏珊。<br><img src="https://pic2.zhimg.com/80/v2-012468b9a9cf5a3fcdec056f77ecf8ca_hd.jpg" alt="cc"><br>8.苏珊收信后，取下数字签名，用鲍勃的公钥解密，得到信件的摘要。由此证明，这封信确实是鲍勃发出的。<br><img src="https://pic1.zhimg.com/80/v2-256531cbfcebd0b6f5344b806bd58c67_hd.jpg" alt="cc"><br>9.苏珊再对信件本身使用Hash函数，将得到的结果，与上一步得到的摘要进行对比。如果两者一致，就证明这封信未被修改过。<br><img src="https://pic1.zhimg.com/80/v2-d449dc5b59c121e3c2b05256cccdd6e7_hd.jpg" alt="cc"><br>10.复杂的情况出现了。道格想欺骗苏珊，他偷偷使用了苏珊的电脑，用自己的公钥换走了鲍勃的公钥。此时，苏珊实际拥有的是道格的公钥，但是还以为这是鲍勃的公钥。因此，道格就可以冒充鲍勃，用自己的私钥做成”数字签名”，写信给苏珊，让苏珊用假的鲍勃公钥进行解密。<br><img src="https://pic1.zhimg.com/80/v2-dacb1e7afe8907817fd1e6777c05ec53_hd.jpg" alt="cc"><br>11.后来，苏珊感觉不对劲，发现自己无法确定公钥是否真的属于鲍勃。她想到了一个办法，要求鲍勃去找”证书中心”（certificate authority，简称CA），为公钥做认证。证书中心用自己的私钥，对鲍勃的公钥和一些相关信息一起加密，生成”数字证书”（Digital Certificate）。<br><img src="https://pic1.zhimg.com/80/v2-0c38ccfd91a115874a251e2af18b3bbd_hd.jpg" alt="cc"><br>12.鲍勃拿到数字证书以后，就可以放心了。以后再给苏珊写信，只要在签名的同时，再附上数字证书就行了。<br><img src="https://pic2.zhimg.com/80/v2-b4a67c50ed418dd246273b77605dbdbc_hd.jpg" alt="cc"><br>13.苏珊收信后，用CA的公钥解开数字证书，就可以拿到鲍勃真实的公钥了，然后就能证明”数字签名”是否真的是鲍勃签的。<br><img src="https://pic4.zhimg.com/80/v2-ed955fdf20dae98d36a461b86b1fa876_hd.jpg" alt="cc"></p>
 
       
 
@@ -180,74 +180,37 @@
     <div class="article-info article-info-index">
       
       
-      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数字签名</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/17/arrow/">展开全文 >></a>
-        </p>
-      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IT//" class="article-tag-list-link color3">IT</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/17/hello-world/">开平碉楼</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/17/hello-world/" class="archive-article-date">
-  	<time datetime="2018-03-16T16:47:05.993Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="../../img/doulou.jpg" alt="cc"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/17/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/03/17/digitalsignature/">展开全文 >></a>
         </p>
       
 
@@ -368,6 +331,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -449,7 +420,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">想个名字打脑壳</div>
   	  	
     	</section>
     
