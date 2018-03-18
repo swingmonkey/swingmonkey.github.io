@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>转载：数字签名是什么？ | swingmonkey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天，我读到一篇好文章。 它用图片通俗易懂地解释了，”数字签名”（digital signature）和”数字证书”（digital certificate）到底是什么。 我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。 数字签名是什么？ 1.鲍勃有两把钥匙，一把是公钥，另一把是私钥。2.鲍勃把公钥送给他的朋">
+  <meta name="description" content="今天，我读到一篇好文章。 它用图片通俗易懂地解释了，”数字签名”（digital signature）和”数字证书”（digital certificate）到底是什么。 我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。">
 <meta name="keywords" content="数字签名,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="转载：数字签名是什么？">
 <meta property="og:url" content="http://yoursite.com/2018/03/17/digitalsignature/index.html">
 <meta property="og:site_name" content="swingmonkey">
-<meta property="og:description" content="今天，我读到一篇好文章。 它用图片通俗易懂地解释了，”数字签名”（digital signature）和”数字证书”（digital certificate）到底是什么。 我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。 数字签名是什么？ 1.鲍勃有两把钥匙，一把是公钥，另一把是私钥。2.鲍勃把公钥送给他的朋">
+<meta property="og:description" content="今天，我读到一篇好文章。 它用图片通俗易懂地解释了，”数字签名”（digital signature）和”数字证书”（digital certificate）到底是什么。 我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。">
 <meta property="og:image" content="http://wx1.sinaimg.cn/mw690/73c262a9gy1fpgttghoiaj20k00bqweu.jpg">
 <meta property="og:image" content="http://wx1.sinaimg.cn/mw690/73c262a9gy1fpgttgv6ylj20k009it95.jpg">
 <meta property="og:image" content="http://wx3.sinaimg.cn/mw690/73c262a9gy1fpgtth8gp6j20k0081wf1.jpg">
@@ -28,10 +28,10 @@
 <meta property="og:image" content="http://wx1.sinaimg.cn/mw690/73c262a9gy1fpgttlbjmaj20k00ce0t8.jpg">
 <meta property="og:image" content="http://wx2.sinaimg.cn/mw690/73c262a9gy1fpgttlryc8j20cn0emmy2.jpg">
 <meta property="og:image" content="http://wx2.sinaimg.cn/mw690/73c262a9gy1fpgttm84pkj20k00c674q.jpg">
-<meta property="og:updated_time" content="2018-03-18T09:04:52.359Z">
+<meta property="og:updated_time" content="2018-03-18T10:59:57.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="转载：数字签名是什么？">
-<meta name="twitter:description" content="今天，我读到一篇好文章。 它用图片通俗易懂地解释了，”数字签名”（digital signature）和”数字证书”（digital certificate）到底是什么。 我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。 数字签名是什么？ 1.鲍勃有两把钥匙，一把是公钥，另一把是私钥。2.鲍勃把公钥送给他的朋">
+<meta name="twitter:description" content="今天，我读到一篇好文章。 它用图片通俗易懂地解释了，”数字签名”（digital signature）和”数字证书”（digital certificate）到底是什么。 我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。">
 <meta name="twitter:image" content="http://wx1.sinaimg.cn/mw690/73c262a9gy1fpgttghoiaj20k00bqweu.jpg">
   
     <link rel="alternative" href="/atom.xml" title="swingmonkey" type="application/atom+xml">
@@ -73,8 +73,6 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
-	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -84,17 +82,17 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">建站日志</a>
     			
             
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
 				
+					<a class="github" target="_blank" href="https://github.com/swingmonkey" title="github"><i class="icon-github"></i></a>
+		        
 					<a class="weibo" target="_blank" href="https://weibo.com/u/1942119081" title="weibo"><i class="icon-weibo"></i></a>
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liaohua/activities" title="zhihu"><i class="icon-zhihu"></i></a>
@@ -128,13 +126,13 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
+						<a class="github" target="_blank" href="https://github.com/swingmonkey" title="github"><i class="icon-github"></i></a>
+			        
 						<a class="weibo" target="_blank" href="https://weibo.com/u/1942119081" title="weibo"><i class="icon-weibo"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/liaohua/activities" title="zhihu"><i class="icon-zhihu"></i></a>
@@ -148,9 +146,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -187,8 +183,7 @@
       
         <p>今天，我读到一篇好文章。</p>
 <p>它用图片通俗易懂地解释了，”数字签名”（digital signature）和”数字证书”（digital certificate）到底是什么。</p>
-<p>我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。</p>
-<p>数字签名是什么？</p>
+<p>我对这些问题的理解，一直是模模糊糊的，很多细节搞不清楚。读完这篇文章后，发现思路一下子就理清了。为了加深记忆，我把文字和图片都翻译出来了。<br><a id="more"></a><br>数字签名是什么？</p>
 <p>1.鲍勃有两把钥匙，一把是公钥，另一把是私钥。<br><img src="http://wx1.sinaimg.cn/mw690/73c262a9gy1fpgttghoiaj20k00bqweu.jpg" alt="cc"><br>2.鲍勃把公钥送给他的朋友们—-帕蒂、道格、苏珊—-每人一把。<br><img src="http://wx1.sinaimg.cn/mw690/73c262a9gy1fpgttgv6ylj20k009it95.jpg" alt="cc"><br>3.苏珊要给鲍勃写一封保密的信。她写完后用鲍勃的公钥加密，就可以达到保密的效果。<br><img src="http://wx3.sinaimg.cn/mw690/73c262a9gy1fpgtth8gp6j20k0081wf1.jpg" alt="cc"><br>4.鲍勃收信后，用私钥解密，就看到了信件内容。这里要强调的是，只要鲍勃的私钥不泄露，这封信就是安全的，即使落在别人手里，也无法解密。<br><img src="http://wx3.sinaimg.cn/mw690/73c262a9gy1fpgtthyz9ej20k00873z3.jpg" alt="cc"><br>5.鲍勃给苏珊回信，决定采用”数字签名”。他写完后先用Hash函数，生成信件的摘要（digest）。<br><img src="http://wx3.sinaimg.cn/mw690/73c262a9gy1fpgttin70hj20k00a40t4.jpg" alt="cc"><br>6.然后，鲍勃使用私钥，对这个摘要加密，生成”数字签名”（signature）。<br><img src="http://wx4.sinaimg.cn/mw690/73c262a9gy1fpgttj219wj20k007xt8r.jpg" alt="cc"><br>7.鲍勃将这个签名，附在信件下面，一起发给苏珊。<br><img src="http://wx4.sinaimg.cn/mw690/73c262a9gy1fpgttjg8hwj20k00a3q3c.jpg" alt="cc"><br>8.苏珊收信后，取下数字签名，用鲍勃的公钥解密，得到信件的摘要。由此证明，这封信确实是鲍勃发出的。<br><img src="http://wx1.sinaimg.cn/mw690/73c262a9gy1fpgttjvvuej20k005djrf.jpg" alt="cc"><br>9.苏珊再对信件本身使用Hash函数，将得到的结果，与上一步得到的摘要进行对比。如果两者一致，就证明这封信未被修改过。<br><img src="http://wx2.sinaimg.cn/mw690/73c262a9gy1fpgttkb1m2j20k009ot99.jpg" alt="cc"><br>10.复杂的情况出现了。道格想欺骗苏珊，他偷偷使用了苏珊的电脑，用自己的公钥换走了鲍勃的公钥。此时，苏珊实际拥有的是道格的公钥，但是还以为这是鲍勃的公钥。因此，道格就可以冒充鲍勃，用自己的私钥做成”数字签名”，写信给苏珊，让苏珊用假的鲍勃公钥进行解密。<br><img src="http://wx2.sinaimg.cn/mw690/73c262a9gy1fpgttktq83j20j909rglz.jpg" alt="cc"><br>11.后来，苏珊感觉不对劲，发现自己无法确定公钥是否真的属于鲍勃。她想到了一个办法，要求鲍勃去找”证书中心”（certificate authority，简称CA），为公钥做认证。证书中心用自己的私钥，对鲍勃的公钥和一些相关信息一起加密，生成”数字证书”（Digital Certificate）。<br><img src="http://wx1.sinaimg.cn/mw690/73c262a9gy1fpgttlbjmaj20k00ce0t8.jpg" alt="cc"><br>12.鲍勃拿到数字证书以后，就可以放心了。以后再给苏珊写信，只要在签名的同时，再附上数字证书就行了。<br><img src="http://wx2.sinaimg.cn/mw690/73c262a9gy1fpgttlryc8j20cn0emmy2.jpg" alt="cc"><br>13.苏珊收信后，用CA的公钥解开数字证书，就可以拿到鲍勃真实的公钥了，然后就能证明”数字签名”是否真的是鲍勃签的。<br><img src="http://wx2.sinaimg.cn/mw690/73c262a9gy1fpgttm84pkj20k00c674q.jpg" alt="cc"></p>
 <p>（完）</p>
 
@@ -438,8 +433,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -451,15 +444,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">建站日志</a></li>
       
         
     </ul>
@@ -480,6 +471,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
@@ -497,14 +496,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
             
             <div class="clearfix"></div>
@@ -551,43 +542,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">想个名字打脑壳</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">2018.3.18 swingmongkey.com域名注册完成 2018.3.17 swingmonkey.github.io搭建完成</div>
   	  	
     	</section>
     
