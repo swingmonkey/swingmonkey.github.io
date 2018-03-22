@@ -16,8 +16,8 @@
 <meta property="og:site_name" content="swingmonkey">
 <meta property="og:description" content="今天看到一条消息：          谷歌地图开放API数据 助力AR游戏研发  API是什么鬼，在百度百科上查到：Application Programming Interface,应用程序编程接口的缩写，最近几年很火的概念，大意是作者把某些功能封装好后，方便其他人调用的接口。调用的人可以很方便使用这些功能，并且不需要知道这些功能的具体实现过程。开发者参考作者的API使用文档可以获取相应的功能，">
 <meta property="og:image" content="https://img3.doubanio.com/f/shire/79c253b2aa2dcafa510c94a934ad70aed2c4776a/pics/nav/lg_main_logo.png">
-<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/73c262a9ly9fplfkobo5qj208x0c10y1.jpg">
-<meta property="og:updated_time" content="2018-03-22T03:46:37.702Z">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/73c262a9gy1fplo3urq9kj20nd0cdtai.jpg">
+<meta property="og:updated_time" content="2018-03-22T08:27:14.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用API获取电影数据">
 <meta name="twitter:description" content="今天看到一条消息：          谷歌地图开放API数据 助力AR游戏研发  API是什么鬼，在百度百科上查到：Application Programming Interface,应用程序编程接口的缩写，最近几年很火的概念，大意是作者把某些功能封装好后，方便其他人调用的接口。调用的人可以很方便使用这些功能，并且不需要知道这些功能的具体实现过程。开发者参考作者的API使用文档可以获取相应的功能，">
@@ -158,7 +158,7 @@
 
         
         <a href="/2018/03/22/利用API获取电影数据/" class="archive-article-date">
-  	<time datetime="2018-03-22T03:38:11.864Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-22</time>
+  	<time datetime="2018-03-22T08:26:01.241Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-22</time>
 </a>
         
       </header>
@@ -169,7 +169,7 @@
 <blockquote>
 <p><a href="https://www.ithome.com/html/android/351188.htm" target="_blank" rel="noopener">谷歌地图开放API数据 助力AR游戏研发</a></p>
 </blockquote>
-<p>API是什么鬼，在百度百科上查到：Application Programming Interface,应用程序编程接口的缩写，最近几年很火的概念，大意是作者把某些功能封装好后，方便其他人调用的接口。调用的人可以很方便使用这些功能，并且不需要知道这些功能的具体实现过程。开发者参考作者的API使用文档可以获取相应的功能，简直共产主义！<br><a id="more"></a><br>当然API也阔以用来爬取数据，与之前用正则表达式相比，用API拿数据，省去了构造re的过程，而且得到的数据是清洗过的，非常贴心~<br>目前，很多大公司都提供了丰富的API供大家使用，这里以<a href="https://developers.douban.com/wiki/?title=guide" target="_blank" rel="noopener">豆瓣API</a>为例。<img src="https://img3.doubanio.com/f/shire/79c253b2aa2dcafa510c94a934ad70aed2c4776a/pics/nav/lg_main_logo.png" alt="此处输入图片的描述"><br>1.浏览豆瓣手册，找到豆瓣TOP250接口，构造请求：<code>url = &quot;https://api.douban.com/v2/movie/top250?start=0&amp;count=100&quot;</code><br>返回值为Json，取出需要的数据，包括title,rating两项。（根据需要可自行增减）<br>2.用Pandas保存至文件。<br>代码如下:</p>
+<p>API是什么鬼，在百度百科上查到：Application Programming Interface,应用程序编程接口的缩写，最近几年很火的概念，大意是作者把某些功能封装好后，方便其他人调用的接口。调用的人可以很方便使用这些功能，并且不需要知道这些功能的具体实现过程。开发者参考作者的API使用文档可以获取相应的功能，简直共产主义！<br><a id="more"></a><br>当然API也阔以用来爬取数据，与之前用正则表达式相比，用API拿数据，省去了构造re的过程，而且得到的数据是清洗过的，非常贴心~<br>目前，很多大公司都提供了丰富的API供大家使用，这里以<a href="https://developers.douban.com/wiki/?title=guide" target="_blank" rel="noopener">豆瓣API</a>为例。<img src="https://img3.doubanio.com/f/shire/79c253b2aa2dcafa510c94a934ad70aed2c4776a/pics/nav/lg_main_logo.png" alt="此处输入图片的描述"><br>1.浏览豆瓣手册，找到豆瓣TOP250接口，构造请求：<code>url = &quot;https://api.douban.com/v2/movie/top250?start=0&amp;count=100&quot;</code><br>返回值为Json，取出需要的数据，包括title,rating两项。（根据需要可自行增减）<br>2.用Pandas保存为EXCEL文件方便浏览。<br>代码如下:</p>
 <pre><code>import requests
 import json
 import pandas as pd
@@ -180,14 +180,25 @@ content = req.content.decode(&apos;utf-8&apos;)
 content = json.loads(content)
 titles = []
 ratings = []
+genres=[]
+casts=[]
+directors=[]
+years=[]
+
 for i in range(0,100):
     titles.append(content[&quot;subjects&quot;][i][&apos;title&apos;])
     ratings.append(content[&quot;subjects&quot;][i][&apos;rating&apos;][&apos;average&apos;])
+    genres.append(content[&quot;subjects&quot;][i][&apos;genres&apos;][0])
+    casts.append(content[&quot;subjects&quot;][i][&apos;casts&apos;][0][&apos;name&apos;])
+    directors.append(content[&quot;subjects&quot;][i][&apos;directors&apos;][0][&apos;name&apos;])
+    years.append(content[&quot;subjects&quot;][i][&apos;year&apos;])
 
-dataframe = pd.DataFrame({&apos;电影名&apos;:titles,&apos;评分&apos;:ratings})
-dataframe.to_csv(&apos;movielist.csv&apos;,sep = &apos;-&apos;,encoding = &apos;utf-8&apos;)
+df = pd.DataFrame({&apos;title&apos;:titles,&apos;rating&apos;:ratings,&apos;year&apos;:years,&apos;casts&apos;:casts,&apos;director&apos;:directors,&apos;genres&apos;:genres})
+columns =[&apos;title&apos;,&apos;rating&apos;,&apos;year&apos;,&apos;genres&apos;,&apos;director&apos;,&apos;casts&apos;]
+#df.index = range(1,len(df)+1)
+df.to_excel(&apos;movielist.xlsx&apos;,sheet_name=&quot;abc&quot;,index=False,header=True,columns=columns,encoding = &apos;gbk&apos;)
 print(&apos;保存完毕！&apos;)
-</code></pre><p>运行结果：<br><img src="http://wx2.sinaimg.cn/mw690/73c262a9ly9fplfkobo5qj208x0c10y1.jpg" alt="此处输入图片的描述"><br>（完）</p>
+</code></pre><p>运行结果：<br><img src="http://wx3.sinaimg.cn/mw690/73c262a9gy1fplo3urq9kj20nd0cdtai.jpg" alt="此处输入图片的描述"><br>（完）</p>
 <div style="position:relative;bottom:20px;text-align: center;"><br>    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="300" height="100" src="//music.163.com/outchain/player?type=2&id=461525011&auto=1&height=66"></iframe><br></div>    
 
 
@@ -496,11 +507,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
+                <a href="javascript:void(0)" class="js-tag color4">API</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color2">Pandas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Json</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,23 +535,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">API,Pandas,Json</a>
+                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">API, Pandas, Json</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">API</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Pandas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Json</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
             
             <div class="clearfix"></div>
